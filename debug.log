@@ -1,0 +1,27 @@
+MODULE 741215: looking for "/home/mattrick/Desktop/coin-pusher/coin-pusher-2000-electron/node_modules/.bin/electron" in ["/home/mattrick/.node_modules","/home/mattrick/.node_libraries","/usr/lib/node"]
+MODULE 741215: load "/home/mattrick/Desktop/coin-pusher/coin-pusher-2000-electron/node_modules/electron/cli.js" for module "."
+MODULE 741215: Module._load REQUEST child_process parent: .
+MODULE 741215: load built-in module child_process
+MODULE 741215: Module._load REQUEST ./ parent: .
+MODULE 741215: RELATIVE: requested: ./ from parent.id .
+MODULE 741215: looking for ["/home/mattrick/Desktop/coin-pusher/coin-pusher-2000-electron/node_modules/electron"]
+MODULE 741215: load "/home/mattrick/Desktop/coin-pusher/coin-pusher-2000-electron/node_modules/electron/index.js" for module "/home/mattrick/Desktop/coin-pusher/coin-pusher-2000-electron/node_modules/electron/index.js"
+MODULE 741215: Module._load REQUEST fs parent: /home/mattrick/Desktop/coin-pusher/coin-pusher-2000-electron/node_modules/electron/index.js
+MODULE 741215: load built-in module fs
+MODULE 741215: Module._load REQUEST path parent: /home/mattrick/Desktop/coin-pusher/coin-pusher-2000-electron/node_modules/electron/index.js
+MODULE 741215: load built-in module path
+MODULE 741222: load built-in module path
+MODULE 741222: load built-in module url
+MODULE 741222: load built-in module fs/promises
+node:internal/modules/esm/translators:295
+    return { module, exportNames: new SafeSet(['default', ...Object.keys(module.exports)]) };
+                                                                                ^
+
+TypeError: Cannot read properties of undefined (reading 'exports')
+    at cjsPreparseModuleExports (node:internal/modules/esm/translators:295:81)
+    at createCJSModuleWrap (node:internal/modules/esm/translators:187:35)
+    at ModuleLoader.<anonymous> (node:internal/modules/esm/translators:247:10)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+
+Node.js v22.17.0

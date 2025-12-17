@@ -29,6 +29,11 @@ Launch the following command to run the game.
 npm start
 ```
 
+If you encounter Linux sandbox errors (or have `ELECTRON_RUN_AS_NODE=1` set in your environment), run:
+```sh
+cd coin-pusher-2000-electron && env -u ELECTRON_RUN_AS_NODE npm start -- --no-sandbox
+```
+
 # Package
 
 Launch the following command to run the game. 

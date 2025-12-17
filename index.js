@@ -1,7 +1,9 @@
 import { join, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { stat, readFile } from "node:fs/promises";
-import { app, BrowserWindow, protocol, screen } from "electron";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const { app, BrowserWindow, protocol, screen } = require("electron");
 
 const MIME_TYPES = {
     ".html": "text/html",
