@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Solana Wallet Adapter styles */
+@import '@solana/wallet-adapter-react-ui/styles.css';
+
+:root {
+  --primary-color: #ffc300; /* A vibrant gold for highlights */
+  --secondary-color: #1a1a1d; /* A dark, near-black for backgrounds */
+  --accent-color: #c70039; /* A deep red for accents and alerts */
+  --text-color: #ffffff;
+  --subtext-color: #a9a9a9; /* A lighter gray for subtext */
+
+  --font-family-main: 'Orbitron', sans-serif; /* A futuristic, gamey font */
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  font-family: var(--font-family-main);
+}
+
+/* Custom styles for wallet adapter buttons */
+.wallet-adapter-button {
+  @apply bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out hover:from-[var(--accent-color)] hover:to-[var(--primary-color)];
+}
+
+.wallet-adapter-modal-wrapper {
+  @apply bg-[var(--secondary-color)] rounded-xl border border-[var(--primary-color)];
+}
+
+/* Glassmorphism effect for cards */
+.glass-card {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:from-[var(--accent-color)] hover:to-[var(--primary-color)] disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-white/10 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent;
+}

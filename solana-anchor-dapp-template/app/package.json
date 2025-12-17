@@ -1,0 +1,58 @@
+{
+  "name": "solana-dapp-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "yarn allow-scripts auto",
+    "allow-scripts": "allow-scripts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "copy-idl": "cp ../target/idl/pvp_game.json src/idl/ && cp ../target/types/pvp_game.ts src/idl/"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.1",
+    "@solana/wallet-adapter-base": "^0.9.25",
+    "@solana/wallet-adapter-react": "^0.15.39",
+    "@solana/wallet-adapter-react-ui": "^0.9.39",
+    "@solana/wallet-adapter-wallets": "^0.19.35",
+    "@solana/web3.js": "^1.98.4",
+    "next": "^14.2.29",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@lavamoat/allow-scripts": "^3.3.1",
+    "@lavamoat/preinstall-always-fail": "^2.1.0",
+    "@types/node": "^22.14.1",
+    "@types/react": "^18.3.19",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.29",
+    "postcss": "^8.4.51",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "@lavamoat/preinstall-always-fail": false,
+      "@coral-xyz/anchor": false,
+      "@solana/web3.js": false,
+      "@solana/wallet-adapter-base": false,
+      "@solana/wallet-adapter-react": false,
+      "@solana/wallet-adapter-react-ui": false,
+      "@solana/wallet-adapter-wallets": false,
+      "next": false,
+      "react": false,
+      "react-dom": false,
+      "tailwindcss": false,
+      "autoprefixer": false,
+      "postcss": false,
+      "typescript": false,
+      "eslint": false,
+      "eslint-config-next": false
+    }
+  }
+}

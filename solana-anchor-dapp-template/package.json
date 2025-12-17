@@ -1,0 +1,47 @@
+{
+  "name": "solana-anchor-dapp-template",
+  "version": "1.0.0",
+  "description": "A production-ready Solana dApp template using Anchor framework",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "yarn allow-scripts auto",
+    "allow-scripts": "allow-scripts",
+    "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
+    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
+    "build": "anchor build",
+    "test": "anchor test",
+    "deploy": "anchor deploy",
+    "deploy:devnet": "anchor deploy --provider.cluster devnet",
+    "deploy:mainnet": "anchor deploy --provider.cluster mainnet",
+    "keys:sync": "anchor keys sync",
+    "idl:init": "anchor idl init --filepath target/idl/pvp_game.json",
+    "idl:upgrade": "anchor idl upgrade --filepath target/idl/pvp_game.json"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.1"
+  },
+  "devDependencies": {
+    "@lavamoat/allow-scripts": "^3.3.1",
+    "@lavamoat/preinstall-always-fail": "^2.1.0",
+    "@types/bn.js": "^5.1.6",
+    "@types/chai": "^5.2.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.14.1",
+    "chai": "^4.5.0",
+    "mocha": "^10.8.2",
+    "prettier": "^3.5.3",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.7.3"
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "@lavamoat/preinstall-always-fail": false,
+      "@coral-xyz/anchor": false,
+      "ts-mocha": false,
+      "mocha": false,
+      "chai": false,
+      "typescript": false,
+      "prettier": false
+    }
+  }
+}

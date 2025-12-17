@@ -1,0 +1,31 @@
+[features]
+seeds = true
+skip-lint = false
+resolution = true
+
+[programs.localnet]
+pvp_game = "979EWfY3g1JNLEsm9LLdZjQ3LRedtXGJ2Z4p6e1ma1AG"
+
+[programs.devnet]
+pvp_game = "979EWfY3g1JNLEsm9LLdZjQ3LRedtXGJ2Z4p6e1ma1AG"
+
+[programs.mainnet]
+pvp_game = "979EWfY3g1JNLEsm9LLdZjQ3LRedtXGJ2Z4p6e1ma1AG"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[test]
+startup_wait = 5000
+shutdown_wait = 2000
+upgradeable = false
+
+[workspace]
+members = ["programs/*"]

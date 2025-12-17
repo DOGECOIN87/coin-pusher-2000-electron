@@ -1,5 +1,14 @@
 **/node_modules
 **/.DS_Store
 **/dist
+**/.next
+**/out
+**/target
+**/.anchor
+**/.turbo
+**/.eslintcache
+**/.env
+**/.env.local
+**/.env.*.local
 /build
 /dist
